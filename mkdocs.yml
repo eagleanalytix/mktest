@@ -1,0 +1,99 @@
+site_name: My Material Site
+site_description: A comprehensive documentation site built with MkDocs
+site_author: Your Name
+site_url: https://eagleanalytix.github.io/mktest/
+
+# Repository
+repo_name: eagleanalytix/mktest
+repo_url: https://github.com/eagleanalytix/mktest
+edit_uri: edit/main/docs/
+
+# Theme Configuration
+theme:
+  name: material
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+  language: en
+  icon:
+    repo: fontawesome/brands/github
+
+# Extensions
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.mark
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+# Plugins
+plugins:
+  - search
+  - mkdocs-jupyter:
+      include_source: True
+      execute: False
+
+# Navigation
+nav:
+  - Home: index.md
+  - Getting Started:
+    - getting-started/installation.md
+    - getting-started/quick-start.md
+  - Guides:
+    - guides/user-guide.md
+    - guides/advanced-topics.md
+  - Tutorials:
+    - tutorials/tutorial-1.md
+    - tutorials/tutorial-2.md
+  - Notebooks:
+    - notebooks/analysis.ipynb
+    - notebooks/visualization.ipynb
+    - notebooks/examples.ipynb
+  - Reference:
+    - reference/api.md
+
+# Extra
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/eagleanalytix/mktest
+    - icon: fontawesome/brands/python
+      link: https://www.python.org/
+  version:
+    provider: mike
+
+# Copyright
+copyright: Copyright &copy; 2025 Your Name
+
